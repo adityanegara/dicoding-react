@@ -1,0 +1,31 @@
+A) Pengertian React
+    : React adalah Javascript library yang
+    digunakan untuk membangun User Interface 
+    (antarmuka pengguna). 
+
+B) Konsep React
+    B.1) Komponen
+    : React memanfaatkan komponen dalam membangun antarmuka. 
+    Setiap komponen terenkapsulasi dan dapat saling dikompo
+    sisikan satu sama lain. Karena adanya komponen,
+    antarmuka yang dibangun oleh React sangat reusable.
+
+    B.2) Deklaratif
+    : Tak ada kode imperatif lagi. Bisa menuliskan
+    layaknya sintaksis HTML di dalam kode Javascript.
+
+    B.3) Aliran Data Searah
+    : Komponen React menampung sebuah data. React secara
+    reaktif akan memperbarui dan me-render komponen jika
+    data di dalamnya berubah.
+
+C) React EcoSystem
+    C.1) React Router
+    : Memudahkan implementasi Routing Jika ingin membuat
+    aplikasi lebih dari satu halaman.
+
+    C.2) Redux
+    : Membuat state terpusat dan bersifat global
+
+    C.3) Jest
+    : Testing
