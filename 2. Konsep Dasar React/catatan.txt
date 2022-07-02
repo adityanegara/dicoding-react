@@ -1,0 +1,112 @@
+A) React Element dan Component
+    A.1) React Element
+        A.1.1) Definisi
+        :  Element di React bisa berupa paragraph, button,
+        image, dan tipe lainnya. Bedanya, React element hanya
+        sebatas objek JavaScript biasa yang mengandung
+        informasi tentang bagaimana antarmuka pengguna
+        harus ditampilkan.
+
+        A.1.2) Contoh
+        : Berikut ocntoh dari object React element paragraf
+        {
+            type: 'p',
+            props: {
+                className: 'p-blue',
+                children: 'Content of paragraph.'
+            }
+        }
+        bila object di render pada DOM akan menghasilkan
+        <p class="p-blue">Content of paragraph.</p>
+
+    A.2) React Component
+        A.2.1) Definisi
+        : Sebuah fungsi yang mengembalikan React Element.
+
+        A.2.2) Contoh
+        functions  Car({manufacture, type, color}){
+            return{
+                manufacture,
+                type,
+                color,
+                unitCode: `${+new Date()}-${manufacture}-${type}-${color}`,
+            }
+        }
+
+        bila object tersebut di render maka akan mengembalikan
+        const Car = ({manufacture, type, color}) =>{
+            return(
+                <div className='car-info'>
+                    <dt>Manufacture:</dt>
+                    <dd>{manufacture}</dd>
+                    <dt>Type:</dt>
+                    <dd>{type}</dd>
+                    <dt>Color:</dt>
+                    <dd>{color}</dd>
+                </div>
+            )
+        }
+
+B) Composition
+    B.1) Definisi
+    : Proses menggabungkan banyak fungsi untuk menciptakan 
+    data yang lebih kompleks dinamakan composition. Praktik
+    komposisi di React biasa ditemukan ketika pembuatan
+    dan penggunaan sebuah component. Component
+    di React bersifat reusable dan dapat dikomposisikan untuk
+    menciptakan component yang lebih kompleks.
+
+    B.2) Contoh
+    : const ProfilePicture = ({userId}) =>{
+        return(
+            <img src=`https://avatar.githubusercontent.com/${userId}`/>
+        )
+    }
+
+    const ProfileLink = ({userName}) =>{
+        return(
+            <a href={`https://github.com/${userName}`}/>
+        )
+    }
+
+    const GithubInfo = ({username, userId}) =>{
+        return(
+            <div className='github-info'>
+                <ProfilePicture userId={userId}/>
+                <ProfileLink username={username}/>
+            </div>
+        )
+    }
+
+C) Declarative unitCode
+    C.1) Imperatif Code
+        C.1.1) Definisi
+        : Menjelaskan secara detail kepada javascript apa
+        dan bagaimana ia harus melakukan sesuatu.
+
+        C.1.2) Contoh
+        : const names ['asep', 'alex', 'bagus'];
+        const upperCaseNames = [];
+        for(let i =0; i< names.length; i++){
+            upperCaseNames[i] = names[i].toUpperCase();
+        }
+
+    C.2) Declarative Code
+        C.2.1) Declarative Code
+        : Memberitahu apa yang ingin dicapai.
+
+        C.2.2) Contoh
+        : const names = 
+          ['Asep', 'Alex', 'Bagus', 'Cika', 'Doni'];
+         const uppercaseNames = names.map((name) => name.toUpperCase());
+
+D) Unidirectional Data Flow
+    : Pada React, data terletak di parent component dan 
+    bila child component membutuhkannya, data tersebut
+    akan dikirim dari parent component. Ketika
+    terjadi perubahan data, parent component yang
+    dapat memperbarui datanya karena memang datanya
+    berada dis sana. Child hanya bisa mengirimkan 
+    data terbaru atau memberikan sinyal bila data
+    perlu diperbarui oleh parent component.
+        
