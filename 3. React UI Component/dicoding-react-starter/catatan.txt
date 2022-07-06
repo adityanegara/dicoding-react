@@ -1,0 +1,74 @@
+A) React Element
+    : Seluruh UI React dibangun menggunakan React Element. Walaupun serupa dengan DOM Element,
+    React element hanyalah objek javascript. 
+
+    A.1) Syntax React Element
+    : React.createElement(<type>, <property>, <content>)
+      1) type : Tag pembuka dan penutup dari element (p, div, li, dll)
+      2) property : property dari element (className, id, onClick),
+      3) content : isi dari element.
+
+    A.2) Contoh
+    : const element = React.createElement('p', {className: 'user-name'}, 'Aditya Negara');
+    nilai element akan diubah menjadi objek
+    {
+        type: 'p',
+        props: {
+             children: "Aditya Negara",
+             className: "user-name
+        }
+    }
+
+B) JSX
+    : Membuat element dengan fungsi createElement terasa sangat deklaratif. Solusi dari itu ialah JSX.
+    JSX ialah sintaks yang mirip seperti HTML Tag. Kemudian ia mengonversi tag tersebut menjadi
+    javascript objek. Pada JSX Anda juga dapat memasukan code javascript.
+
+    B.1) Contoh
+    : const element = <p className='user-name'>Hello Aditya!</p>
+      syntax tersebut akan mengembalikan objek
+        {
+            type: 'p',
+            props: {
+                children: "Hello Aditya!",
+                className: "user-name
+            }
+        }
+
+    B.2) Contoh dengan code javascript
+    : const name = "Aditya Negara";
+      const element = <p className='user-name'>Hello {name}!</p>
+      syntax tersebut akan mengembalikan 
+          {
+            type: 'p',
+            props: {
+                children: ["Hello", "Aditya Negara", "!"],
+                className: "user-name"
+            }
+        }
+
+C) React Component
+    : React Component merupakan fungsi JavaScript yang mengembalikan
+    React element. Dengan adanya component anda dapat menaruh
+    logika yang kompleks dalam membuat UI. Dan juga membuat UI yang
+    bersifat reusable.
+
+    C.1) Properties
+    : Component memiliki satu parameter yaitu objek berupa props.
+    
+        C.1.1) Pengunaan
+            <SayHello name="Bill" company="Microsoft" />;
+            dan dalam kompoentnya
+            const sayHello = (props) =>{
+                const name = props.name;
+                const company = props.company;
+                return(
+                    <p>Hello, {name} from {company}</p>
+                )
+            }
+        
+        C.1.2) Best Practice Props
+        : 1) Hindari penggunaan javascript object ketika
+        mengirimkan data pada component.
+          2) destructuring property props
+          3) property bersifat read only
