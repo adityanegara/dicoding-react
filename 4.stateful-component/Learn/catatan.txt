@@ -1,0 +1,20 @@
+A) Class Component
+    : Dalam class component terdapat fitur
+    state dan lifecycle. Sedangkan pada Function Component
+    harus menggunakan hook.
+
+B) State Component
+    B.1) Inisialisasi State
+    : State diinisialisasi di dalam constructor 
+        constructor(props){
+            super(props)
+            this.state = {count : 0}
+        }
+
+    B.2) Mengubah Nilai State
+        B.2.1) Mengubah nilai state seutuhnya
+        : this.setState({count: 0})
+
+        B.2.2) Mengubah nilai state dengan nilai state sebelumnya
+        : this.setState((previousState) =>{return {count: previousState.count + 1}})
+     
