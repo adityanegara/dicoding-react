@@ -15,68 +15,8 @@
     width: 100%;
     flex-direction: column;
 }
-.orange-note{
-    background-color: #F0A500;
-}
-.orange-note:hover{
-    background-color: #c78901;
-    box-shadow: rgba(240, 165, 0, 0.4) 0px 30px 90px;
-}
-.blue-note{
-    background-color: #3282B8;
-}
-.blue-note:hover{
-    background-color: #215a81;
-    box-shadow: rgba(50, 130, 184, 0.4) 0px 30px 90px;
-}
-.green-note{
-    background-color: #4E9F3D;
-}
-.green-note:hover{
-    background-color: #3a762e;
-    box-shadow: rgba(78, 159, 61, 0.4) 0px 30px 90px;
-}
-
-.red-note{
-    background-color: #F05454;
-}
-.red-note:hover{
-    background-color: #b94242;
-    box-shadow: rgba(240, 84, 84, 0.4) 0px 30px 90px;
-}
-
-.note{
-  p{
-    width: 60%;
-    line-height: 31.5px;
-
-    padding: 20px;
-
-  }
-
-  font-weight: bold;
-  font-size: 23px;
-  height: 320px;
-
-  border-radius: 25px;
-  color: #F4F4F4;
-  display: flex;
-
-  transition: ease-in 0.2s;
-}
-.note:hover{
-    cursor: pointer;
-}
 
 
-
-.width-small{
-    width: 100%;
-}
-
-.width-large{
-    width: 100%;
-}
 
 @media only screen and (min-width: 600px) {
     .note-list{
@@ -87,13 +27,6 @@
         gap: 50px;
         flex-direction: row;
     }
-    .width-small{
-        width: 50%;
-    }
-    
-    .width-large{
-        width: 50%;
-    }
 }
 
 @media only screen and (min-width: 800px) {
@@ -103,12 +36,5 @@
     }
     .note-row{
         gap: 50px;
-    }
-    .width-small{
-        width: 60%;
-    }
-    
-    .width-large{
-        width: 40%;
     }
 }
