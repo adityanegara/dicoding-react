@@ -1,12 +1,8 @@
 import './global.scss';
-import NoteList from './components/molecules/NoteList/NoteList';
+import NoteApp from './components/organisms/NoteApp';
  
 const App = () =>{
-  return(
-    <div>
-      <NoteList/>
-    </div>
-  )
+  return <NoteApp/>
 }
 
 export default App;

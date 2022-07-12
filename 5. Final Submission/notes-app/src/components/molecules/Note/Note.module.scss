@@ -1,31 +1,33 @@
+@use '../../../variables.scss' as *;
+
 .orange-note{
-    background-color: #F0A500;
+    background-color: $orange;
 }
 .orange-note:hover{
-    background-color: #c78901;
-    box-shadow: rgba(240, 165, 0, 0.4) 0px 30px 90px;
+    background-color: $orange-dark;
+    box-shadow: $orange-shadow;
 }
 .blue-note{
-    background-color: #3282B8;
+    background-color: $blue;
 }
 .blue-note:hover{
-    background-color: #215a81;
-    box-shadow: rgba(50, 130, 184, 0.4) 0px 30px 90px;
+    background-color: $blue-dark;
+    box-shadow: $blue-shadow;
 }
 .green-note{
-    background-color: #4E9F3D;
+    background-color: $green;
 }
 .green-note:hover{
-    background-color: #3a762e;
-    box-shadow: rgba(78, 159, 61, 0.4) 0px 30px 90px;
+    background-color: $green-dark;
+    box-shadow: $green-shadow;
 }
 
 .red-note{
-    background-color: #F05454;
+    background-color: $red;
 }
 .red-note:hover{
-    background-color: #b94242;
-    box-shadow: rgba(240, 84, 84, 0.4) 0px 30px 90px;
+    background-color: $red-dark;
+    box-shadow: $red-shadow;
 }
 
 .note{

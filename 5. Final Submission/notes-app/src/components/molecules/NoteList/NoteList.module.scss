@@ -1,11 +1,7 @@
 .note-list{
-    margin-top: 30px;
-    margin-bottom: 30px;
+
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
     gap: 35px;
 }
 
@@ -20,7 +16,6 @@
 
 @media only screen and (min-width: 600px) {
     .note-list{
-        width: 95%;
         gap: 50px;
     }
     .note-row{
@@ -31,7 +26,6 @@
 
 @media only screen and (min-width: 800px) {
     .note-list{
-        max-width: 1000px;
         gap: 50px;
     }
     .note-row{
