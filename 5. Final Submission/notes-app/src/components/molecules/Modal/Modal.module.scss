@@ -11,6 +11,23 @@
     transform: translate(-50%, -50%);
     padding-top: 2vh;
     padding-bottom: 3vh;
+    transition: ease-in 0.2s;
+}
+
+.modal-bg__orange{
+    background-color: $orange;
+}
+
+.modal-bg__green{
+    background-color: $green;
+}
+
+.modal-bg__blue{
+    background-color: $blue;
+}
+
+.modal-bg__red{
+    background-color: $red;
 }
 
 .close-modal__button{
@@ -48,13 +65,13 @@
 
 @media only screen and (min-width: 600px) {
     .modal{
-        width: 95%;
+        max-width: 500px;
     }
 }
 
 
 @media only screen and (min-width: 800px) {
     .modal{
-        max-width: 800px;
+        max-width: 500px;
     }
 }
