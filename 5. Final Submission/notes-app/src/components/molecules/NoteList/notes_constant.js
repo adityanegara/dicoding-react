@@ -1,7 +1,7 @@
 const NOTES = [
     {
         id: 1, 
-        title: '5 Food Apps Delivering The Best Of Your City',
+        title: 'Jigglypuff jigglyPUFFFF!!',
     },
     {
         id: 2,
