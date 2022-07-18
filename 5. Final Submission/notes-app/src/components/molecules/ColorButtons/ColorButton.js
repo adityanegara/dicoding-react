@@ -1,8 +1,8 @@
-import styles from './Test.module.scss'
+import styles from './ColorButtons.module.scss'
 import uiStore from '../../../store/uiStore';
 import { getSelectedButton } from './ColorButtonsLogic';
 
-const Test = () =>{
+const ColorButton = () =>{
     const createModalBackgroundColor = uiStore(state => state.createModalBackgroundColor);
     const changeCreateModalBackgroundColor = uiStore(state => state.changeCreateModalBackgroundColor);
     return(
@@ -15,4 +15,4 @@ const Test = () =>{
     )
 }
 
-export default Test;
+export default ColorButton;
