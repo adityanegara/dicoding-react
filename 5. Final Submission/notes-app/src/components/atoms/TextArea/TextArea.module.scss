@@ -1,7 +1,12 @@
 @use '../../../variables.scss' as *;
 
 .custom-textarea{
-    all: unset;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none; 
     padding-bottom: 15px;
     font-size: 18px;
     font-weight: bold;
@@ -29,4 +34,12 @@
    
    .custom-textarea::-ms-input-placeholder { /* Microsoft Edge */
     color: white;
+}
+
+.custom-label{
+    font-size: 16px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
 }

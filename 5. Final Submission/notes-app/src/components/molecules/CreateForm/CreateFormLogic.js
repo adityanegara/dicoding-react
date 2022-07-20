@@ -16,7 +16,7 @@ const getFontColorCreateButtonHover = (background) =>{
 }
 
 const getTextAreaRows = (isDesktop) =>{
-  return (isDesktop) ? "5" : "10";
+  return (isDesktop) ? "5" : "7";
 }
 
 export {getFontColorCreateButtonHover, getTextAreaRows};

@@ -24,8 +24,8 @@ const CreateForm = () =>{
 
     return(
         <form onSubmit={(e)=>{e.preventDefault()}}className={styles['create-form']}>
-              <Input value={title} onHandleChange={onHandleTitleChange} type="text" placeholder="Note Title..."/>
-              <TextArea rows={getTextAreaRows(isDesktop)} value={description} onHandleChange={onHandleDescriptionChange} placeholder="Note Description..."/>
+              <Input value={title} onHandleChange={onHandleTitleChange} type="text" placeholder="Note Title..." charactersLimit={50}/>
+              <TextArea rows={getTextAreaRows(isDesktop)} value={description} onHandleChange={onHandleDescriptionChange} placeholder="Note Description..." charactersLimit={100}/>
               <ColorButtons/>
               <div className={styles['button-group']}>
                     <button className={getFontColorCreateButtonHover(createModalBackgroundColor)}>Create</button>
