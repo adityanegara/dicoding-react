@@ -1,11 +1,12 @@
 import styles from './NoteList.module.scss';
-import NOTES from './notes_constant';
 import { renderNotes } from './NoteListLogic';
+import notesStore from '../../../store/noteStore';
 
 const NoteList = () =>{
+    const notes = notesStore(state => state.notes);
     return(
         <div className={styles['note-list']}>
-           {renderNotes(NOTES)}
+           {renderNotes(notes)}
         </div>
     )
 }

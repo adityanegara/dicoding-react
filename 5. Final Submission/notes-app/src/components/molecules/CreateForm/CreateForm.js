@@ -6,11 +6,14 @@ import ColorButtons from '../ColorButtons/ColorButton';
 import {getFontColorCreateButtonHover, getTextAreaRows} from './CreateFormLogic';
 import uiStore from '../../../store/uiStore';
 import useMediaQuery from '../../../hooks/useMediaQuery';
+import notesStore from '../../../store/noteStore'; 
 
 const CreateForm = () =>{
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const createModalBackgroundColor = uiStore(state => state.createModalBackgroundColor);
+    const toggleCreateModalOpen = uiStore(state => state.toggleCreateModalOpen);
+    const createNote = notesStore(state => state.createNote);
     const isDesktop = useMediaQuery('(min-width: 600px)');
 
 
@@ -22,14 +25,28 @@ const CreateForm = () =>{
         setDescription(newDescription);
     }
 
+    const onHandleResetButtonClicked = () =>{
+        setTitle('');
+        setDescription('');
+    }
+
+    const onHandleCreateButtonClicked = () =>{
+        createNote({
+            title: title,
+            body: description,
+            color: createModalBackgroundColor
+        })
+        toggleCreateModalOpen();
+    }
+
     return(
         <form onSubmit={(e)=>{e.preventDefault()}}className={styles['create-form']}>
               <Input value={title} onHandleChange={onHandleTitleChange} type="text" placeholder="Note Title..." charactersLimit={50}/>
               <TextArea rows={getTextAreaRows(isDesktop)} value={description} onHandleChange={onHandleDescriptionChange} placeholder="Note Description..." charactersLimit={100}/>
               <ColorButtons/>
               <div className={styles['button-group']}>
-                    <button className={getFontColorCreateButtonHover(createModalBackgroundColor)}>Create</button>
-                    <button>Reset</button>
+                    <button type='button' onClick={onHandleCreateButtonClicked} className={getFontColorCreateButtonHover(createModalBackgroundColor)}>Create</button>
+                    <button onClick={onHandleResetButtonClicked}>Reset</button>
               </div>
         </form>
     )

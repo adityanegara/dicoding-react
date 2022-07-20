@@ -1,10 +1,10 @@
 import styles from './Note.module.scss';
-import { getNoteWidth, getNoteColor} from './NoteLogic';
+import { getNoteWidth} from './NoteLogic';
 
 
 const Note = ({note, index, rowIndex}) =>{
     return(
-        <li className={`${styles['note']} ${getNoteWidth(index, rowIndex)} ${getNoteColor()}`}>
+        <li className={`${styles['note']} ${styles[`${note.color}-note`]} ${getNoteWidth(index, rowIndex)}`}>
             <p>{note.title}</p>
         </li>
     )

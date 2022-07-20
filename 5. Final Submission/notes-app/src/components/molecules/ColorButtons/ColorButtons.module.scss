@@ -32,3 +32,14 @@
 .selected{
     border: 5px solid white !important;
 }
+
+@media only screen and (min-width: 600px) {
+    .colors-button{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
