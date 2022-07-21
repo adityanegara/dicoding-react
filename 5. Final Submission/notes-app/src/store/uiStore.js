@@ -1,10 +1,10 @@
 import create from "zustand";
 
 const uiStore = create(set => ({
-    isCreateModalOpen: false,
+    isModalOpen: false,
     isDetailModalOpen: false,
     createModalBackgroundColor: 'orange',
-    toggleCreateModalOpen : () => set(state =>({isCreateModalOpen: !state.isCreateModalOpen})),
+    toggleModalOpen : () => set(state =>({isModalOpen: !state.isModalOpen})),
     toggleDetailModalOpen: () => set(state=>({isDetailModalOpen: !state.isDetailModalOpen})),
     changeCreateModalBackgroundColor: (newColor) =>set({createModalBackgroundColor: newColor}) 
 }))

@@ -4,10 +4,10 @@ import uiStore from '../../../store/uiStore';
 
 const WidgetButton = ({label, position, text}) =>{
 
-    const toggleCreateModalOpen = uiStore(state => state.toggleCreateModalOpen);
+    const toggleModalOpen = uiStore(state => state.toggleModalOpen);
 
     return(
-        <button aria-label={label} onClick={toggleCreateModalOpen} className={`${styles['widget-button']} ${getWidgetButtonPosition(position)}`}>
+        <button aria-label={label} onClick={toggleModalOpen} className={`${styles['widget-button']} ${getWidgetButtonPosition(position)}`}>
             {text}
         </button>
     )

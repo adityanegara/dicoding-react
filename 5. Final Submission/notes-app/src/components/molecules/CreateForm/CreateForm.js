@@ -12,7 +12,7 @@ const CreateForm = () =>{
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const createModalBackgroundColor = uiStore(state => state.createModalBackgroundColor);
-    const toggleCreateModalOpen = uiStore(state => state.toggleCreateModalOpen);
+    const toggleModalOpen = uiStore(state => state.toggleModalOpen);
     const createNote = notesStore(state => state.createNote);
     const isDesktop = useMediaQuery('(min-width: 600px)');
 
@@ -36,13 +36,13 @@ const CreateForm = () =>{
             body: description,
             color: createModalBackgroundColor
         })
-        toggleCreateModalOpen();
+        toggleModalOpen();
     }
 
     return(
         <form onSubmit={(e)=>{e.preventDefault()}}className={styles['create-form']}>
               <Input value={title} onHandleChange={onHandleTitleChange} type="text" placeholder="Note Title..." charactersLimit={50}/>
-              <TextArea rows={getTextAreaRows(isDesktop)} value={description} onHandleChange={onHandleDescriptionChange} placeholder="Note Description..." charactersLimit={100}/>
+              <TextArea rows={getTextAreaRows(isDesktop)} value={description} onHandleChange={onHandleDescriptionChange} placeholder="Note Description..." charactersLimit={500}/>
               <ColorButtons/>
               <div className={styles['button-group']}>
                     <button type='button' onClick={onHandleCreateButtonClicked} className={getFontColorCreateButtonHover(createModalBackgroundColor)}>Create</button>

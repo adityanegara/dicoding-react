@@ -4,15 +4,20 @@ import Note from '../Note/Note';
 
 
 const renderNotes = (notes) =>{
-    const noteRow = arrayToChunkArray(notes, 2);
-    let test =  noteRow.map((noteRow, rowIndex)=>{
-        return(
-            <ul key={`row-${rowIndex}`}  className={styles['note-row']}>
-                {renderNoteRow(noteRow, rowIndex)}
-            </ul>
-        )
-    })
-    return test;
+    if(notes.length > 0){
+        const noteRow = arrayToChunkArray(notes, 2);
+        return noteRow.map((noteRow, rowIndex)=>{
+            return(
+                <ul key={`row-${rowIndex}`}  className={styles['note-row']}>
+                    {renderNoteRow(noteRow, rowIndex)}
+                </ul>
+            )
+        })
+    }
+    return(
+        <p className={styles['empty-note']}>No Notes</p>
+    )
+    
 }
 
 const renderNoteRow = (noteRow, rowIndex) =>{
